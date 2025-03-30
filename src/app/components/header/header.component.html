@@ -1,0 +1,17 @@
+<header>
+    <h3>Rick and Morty APP - UTN</h3>
+    <nav>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        @if(isloggingId) {
+        <li><a routerLink="/characters">Characters</a></li>
+        }
+        <li><a routerLink="/contact">Contact</a></li>
+        @if(isloggingId) {
+        <li><button (click)="isloggingId = false">Cerrar sesión</button></li>
+        } @else {
+        <li><button (click)="isloggingId = true">Iniciar sesión</button></li>
+        }
+      </ul>
+    </nav>
+  </header>
