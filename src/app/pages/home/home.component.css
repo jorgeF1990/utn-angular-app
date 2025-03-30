@@ -1,0 +1,53 @@
+/* Estilos iniciales para el <h1> */
+h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #2e3b4e;
+    animation: fadeIn 2s ease-in-out, slideUp 1s ease-out;
+    opacity: 1; /* Aseguramos que la opacidad sea 1 desde el principio */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición para el movimiento */
+  }
+  
+  /* Estilos iniciales para el <h2> */
+  h2 {
+    font-size: 1.8em;
+    text-align: center;
+    color: #4c6a92;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out, slideUp 1s ease-out 0.5s;
+    opacity: 1; /* Aseguramos que la opacidad sea 1 desde el principio */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición para el movimiento */
+  }
+  
+  /* Animación de FadeIn */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0; /* La opacidad empieza en 0 */
+    }
+    100% {
+      opacity: 1; /* La opacidad termina en 1 */
+    }
+  }
+  
+  /* Animación de SlideUp */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(20px); /* Empieza ligeramente desplazado hacia abajo */
+    }
+    100% {
+      transform: translateY(0); /* Vuelve a su posición original */
+    }
+  }
+  
+  /* Efecto de movimiento cuando el mouse pasa por encima del <h1> */
+  h1:hover {
+    transform: scale(1.1) rotate(-5deg); /* Aumentar tamaño y girar ligeramente */
+    color: #ff6347; /* Cambiar color al pasar el mouse */
+  }
+  
+  /* Efecto de movimiento cuando el mouse pasa por encima del <h2> */
+  h2:hover {
+    transform: scale(1.1) rotate(5deg); /* Aumentar tamaño y girar ligeramente */
+    color: #ff6347; /* Cambiar color al pasar el mouse */
+  }
+  

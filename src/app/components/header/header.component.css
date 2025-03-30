@@ -1,0 +1,119 @@
+/* Estilos generales para el <header> */
+header {
+    background-color: #2e3b4e;
+    color: #ffffff;
+    padding: 20px 40px; /* Añadimos padding a los lados para que no quede pegado al borde */
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra más suave y notable */
+    z-index: 10; /* Aseguramos que el header esté por encima del contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Estilos para el <h3> dentro del header */
+  header h3 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    animation: fadeInHeader 2s ease-in-out;
+    opacity: 0;
+    color: #ffffff; /* Aseguramos que el texto sea blanco */
+    font-weight: bold;
+  }
+  
+  /* Animación de FadeIn para el <h3> */
+  @keyframes fadeInHeader {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilo para la navegación */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Hace que los elementos se acomoden en varias líneas si es necesario */
+  }
+  
+  /* Estilo para cada elemento de lista en el <nav> */
+  nav ul li {
+    display: inline-block;
+  }
+  
+  /* Estilos para los enlaces dentro del <nav> */
+  nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border-radius: 5px; /* Añadimos bordes redondeados */
+  }
+  
+  /* Efecto de hover para los enlaces */
+  nav ul li a:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+    background-color: rgba(255, 99, 71, 0.1); /* Fondo ligero en hover */
+  }
+  
+  /* Estilo para los botones de "Iniciar sesión" y "Cerrar sesión" */
+  nav ul li button {
+    background-color: #4c6a92;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  /* Efecto de hover para los botones */
+  nav ul li button:hover {
+    background-color: #ff6347;
+    transform: scale(1.05);
+    background-color: rgba(255, 99, 71, 0.2); /* Fondo suave al hacer hover */
+  }
+  
+  /* Estilo para el enlace "Home" activo */
+  nav ul li a.router-link-active {
+    font-weight: bold;
+    color: #ff6347;
+    background-color: rgba(255, 99, 71, 0.1); /* Fondo suave para el enlace activo */
+  }
+  
+  /* Estilos para la sección de navegación en pantallas más pequeñas */
+  @media (max-width: 768px) {
+    /* Cambiar la disposición del nav en pantallas pequeñas */
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Mejorar la presentación de los enlaces en móviles */
+    nav ul li a {
+      font-size: 1.1em;
+      padding: 10px 15px;
+    }
+  
+    nav ul li button {
+      font-size: 1.1em;
+      padding: 12px 20px;
+    }
+  }
+  
